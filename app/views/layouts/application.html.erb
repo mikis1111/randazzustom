@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tomweb</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    
+    <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+  <!-- Materialize JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  
+  <style>
+    /* Aggiungi lo stile personalizzato qui se non hai un file CSS separato */
+    .dropdown-content {
+      width: auto !important;
+      white-space: nowrap;
+    }
+  </style>
+  
+  </head>
+
+  <body>
+  
+  <header>  
+   <nav class="black z-depth-2">
+   <div class="container">
+    <div class="nav-wrapper">
+      <%= link_to 'Tommaso Randazzo', root_path, class: 'brand-logo' %>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><%= link_to 'Chi sono', about_path %></li>
+        <li><%= link_to 'I miei libri', books_index_path %></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Contatti<i class="material-icons right"></i></a></li>
+        
+      </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><%= link_to 'Chi sono', about_path %></li>
+    <li><%= link_to 'I miei Libri', books_index_path %></li>
+    <li><a href="mailto:randazzus@gmail.com">Contatti</a></li>
+
+    <!-- Dropdown Structure -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="mailto:randazzus@gmail.com">randazzus@gmail.com</a></li>
+    <!-- Altri contatti se necessario -->
+  </ul>
+        
+  </ul>
+
+  <style>
+    /* Aumenta la dimensione del font per le voci di menu specificate */
+    nav .nav-wrapper ul li:nth-child(1) a {
+        font-size: 20px; /* Chi sono */
+    }
+    nav .nav-wrapper ul li:nth-child(2) a {
+        font-size: 20px; /* I miei libri */
+    }
+    nav .nav-wrapper ul li:nth-child(3) a {
+        font-size: 20px; /* Contatti */
+    }
+  </style>
+
+
+  </header>
+<div class="home-background">
+
+  <main>
+  
+
+
+  
+</div>
+    <%= yield %>
+    
+  </main>
+
+        <footer>
+  <p class="copyright-text">Tommaso Randazzo © 2024 Copyright Text</p>
+</footer>
+            
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(elems);
+  });
+</script>
+
+
+  </body>
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems, {});
+    });
+
+    // Inizializzazione del dropdown
+  document.addEventListener('DOMContentLoaded', function() {
+    var dropdowns = document.querySelectorAll(".dropdown-trigger");
+    var dropdownInstances = M.Dropdown.init(dropdowns, {
+      coverTrigger: false // Questo permette al dropdown di apparire sotto l'elemento trigger
+      
+    });
+  });
+  </script>
+  
+  <!-- Se stai usando jQuery, assicurati che jQuery sia incluso prima di questo script -->
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+    });
+  </script>
+</html>

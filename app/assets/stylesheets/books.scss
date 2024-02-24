@@ -1,0 +1,159 @@
+/* app/assets/stylesheets/books.css */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea tre colonne */
+    gap: 20px; /* Distanza tra le card */
+  }
+  
+ 
+  
+  .card-title {
+    background: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+
+  
+ 
+   
+  
+  /* Stilizza il container dei libri per assicurare che il layout sia pulito e organizzato */
+.books-container, .books-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; /* Ajusta questo valore per controllare lo spazio tra le carte */
+    justify-content: center; /* Centra le carte dei libri se desiderato */
+  }
+  
+  /* Stilizza ogni carta libro */
+  .book-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opzionale: aggiunge un'ombra per migliorare l'estetica */
+    margin: 10px; /* Riduci per avvicinare i libri */
+    padding: 20px; /* Ajusta il padding interno */
+    width: 230px; /* O un'altra misura, a seconda delle tue esigenze */
+    
+    
+  }
+
+  .book-card {
+    min-height: 480px; /* Garantisce che tutte le card abbiano almeno questa altezza, ma possono espandersi se il contenuto è più lungo */
+  }
+  
+  .book-cover {
+    width: 120%; /* Assicura che la copertina si adatti alla larghezza della card */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+  }
+  
+  .books-container, .books-row {
+    margin-bottom: 30px; /* Ajusta questo valore a seconda dello spazio desiderato */
+  }
+  
+  
+  
+  #popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1000;
+    border: 1px solid #ccc;
+    box-shadow: 0 51px 55px rgba(0,0,0,0.5);
+  }
+  
+
+
+ /* app/assets/stylesheets/books.css */
+.titolo-miei-libri {
+    font-family: 'Playfair Display', serif; /* Usa il nome del font che hai scelto */
+    color: #333;
+    text-align: center;
+    font-size: 34px;
+    margin-top: 60px;
+  }
+  
+  .books-row
+{
+  margin-bottom: auto;
+}
+
+
+
+  
+
+  .popup {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%; /* Aumenta la larghezza del popup se necessario */
+  height: 80%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow-y: scroll; /* Mantiene il contenuto nascosto oltre le dimensioni del popup */
+}
+
+.popup-content {
+  display: flex;
+  height: 100%;
+  width: 100%; /* Assicura che il contenuto riempia completamente il popup */
+}
+
+.book-cover-container {
+  flex: 1 0 50%; /* Modifica qui per assegnare un'adeguata larghezza alla copertina */
+  display: flex;
+  justify-content: center; /* Centra orizzontalmente la copertina del libro */
+  align-items: center; /* Centra verticalmente la copertina del libro */
+  padding: 20px; /* Aggiunge spazio intorno alla copertina per evitare che tocchi i bordi del popup */
+}
+
+.book-cover-container img {
+  width: auto; /* Ajusta questa proprietà */
+  max-width: 100%; /* Assicura che l'immagine non superi la larghezza del contenitore */
+  max-height: 100%; /* Assicura che l'immagine non superi l'altezza del contenitore */
+  height: auto; /* Mantiene le proporzioni dell'immagine */
+  object-fit: contain; /* Questo può aiutare a mantenere l'immagine visibile completamente */
+}
+
+.book-details {
+  flex: 1 0 50%; /* Modifica qui per assegnare un'adeguata larghezza ai dettagli del libro */
+  padding: 20px;
+  overflow-y: auto; /* Permette lo scrolling verticale per i dettagli del libro */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #000000; /* Esempio di colore di sfondo */
+  }
+
+  @media (max-width: 600px) {
+    .popup {
+      width: 90%; /* Occupa più spazio dello schermo su dispositivi piccoli */
+      max-width: none; /* Permetti al popup di estendersi fino ai bordi dello schermo */
+    }
+  }
+
+  
+
+
+
+

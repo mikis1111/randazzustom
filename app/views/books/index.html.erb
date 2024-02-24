@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  
+  <style>
+    .books-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+   
+    .book-card {
+  cursor: pointer;
+  width: 240px; /* Aumenta la larghezza della card se necessario */
+  height: 380px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 15px; /* Distanza tra le carte */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra l'immagine nella card */
+}
+
+.book-cover {
+  width: 100%; /* Fa sì che l'immagine riempia la larghezza della card */
+  height: auto; /* Mantiene le proporzioni dell'immagine */
+  max-width: 220px; /* Imposta una larghezza massima per l'immagine */
+  border-radius: 5px; /* Opzionale: aggiunge bordi arrotondati all'immagine */
+}
+
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      background-color: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      z-index: 1000;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .popup-content {
+      display: flex;
+    }
+    .book-cover-container img {
+      max-width: 60%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .book-details {
+      padding-left: 20px;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+
+    @media (max-width: 600px) {
+    .popup-active .popup-book-cover {
+        display: none;
+    }
+}
+
+
+  </style>
+
+  
+
+<h1 class="titolo-miei-libri">I miei libri</h1>
+
+<div class="books-row">
+
+  <!-- Libro 1 -->
+  <div class="book-card" data-book-id="1" onclick="openPopup(this)" data-title="Zoologia Urbana" data-description="Zoologia Urbana è un “bestiario di città”, una miriade di personaggi del sottobosco
+cittadino, che vivono in un ambiente alienante. Edifici tutti uguali, slot machine, discoteche.
+Una giungla di cemento e schermi digitali in opposizione alla natura, alla campagna, a un
+altrove continuamente sognato da Nico, il protagonista di questa odissea metropolitana,
+che ci racconta la sua storia con ironia amara e con un linguaggio crudo, esplicito,
+influenzato dai dialetti, dallo slang della strada, dal gergo della marginalità, ridondante di
+parole volgari e imprecazioni. Nico è a tutti gli effetti vittima di una dipendenza, il gioco
+d&#39;azzardo, in tutte le sue sfumature, dalle scommesse sui combattimenti clandestini al
+poker, ma con un amore viscerale per le luccicanti e seducenti slot machine.  Il romanzo
+racconta le condizioni esistenziali di chi vive ai margini delle metropoli contemporanee,
+descrive lucidamente le molteplici droghe, dagli psicofarmaci al gioco d’azzardo, che il
+sistema utilizza per contenere, distrarre, indirizzare altrove le energie e le coscienze degli
+esclusi. Mostra senza mezzi termini l’ipocrisia, la violenza e la schiavitù che si nasconde
+dietro la prostituzione delle donne straniere, trafficate e vendute, vittime degli istinti sadici
+e repressi degli uomini della società in cui viviamo.<br><br>">
+
+ 
+    <%= image_tag('copertina-libro0.jpg', alt: 'Copertina del libro Il mistero della casa sul lago', class: 'book-cover') %>
+    <h3></h3>
+    <p></p>
+    
+    <a href="https://www.libreriasensibiliallefoglie.com/home/461-zoologia-urbana.html" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Acquista il libro</a>
+
+  </div>
+  
+  <!-- Libro 2 -->
+ <div class="book-card" data-book-id="2" onclick="openPopup(this)" data-title="40 giorni a Floripa" data-description="Florianopolis, per gli amici Floripa, è la città-isola che accoglie Tommaso, educatore
+italiano per la prima volta in Brasile grazie a un progetto di cooperazione e interscambio, la
+Rete Aquilone. L’autore si immerge in una realtà umana e sociale diversa, piena di
+complessità, di contraddizioni, eppure profondamente vicina, intensa, coinvolgente. Il
+confronto con un contesto educativo difficile diventa così lo spunto per riflettere sul suo
+ruolo, sulle motivazioni personali e sulle scelte di vita. Dalle pagine del libro emerge il
+Brasile, il suo fascino, la sua musica di sole e di luna, il suo volto sorridente, pieno di vita,
+velato da una intensa e appassionata nostalgia. Il Brasile reale, quello della polizia
+violenta e dell’esclusione sociale, del narcotraffico e delle comunità impoverite. Ma anche
+il Brasile irreale, territorio dell’immaginario e del sogno, nella sua dimensione fantastica e
+multicolore di spiagge oceaniche, di foreste selvagge, di magie e di danze.
+Facendo il volontario nelle periferie l’autore incontra i bambini e le bambine di Floripa, gli
+educatori e le educatrici, i mouradores de rua e gli adolescenti in libertà condizionata, i
+preti cattolici e le mães de santo delle religioni afrobrasiliane. Sono loro i veri protagonisti
+di questi caotici e indimenticabili quaranta giorni.<br><br>">
+  <%= image_tag('copertina-libro1.jpg', alt: 'Copertina del libro Le avventure di Sherlock Holmes', class: 'book-cover') %>
+  <h3></h3>
+  <p></p>
+  <a href="https://www.edizioniets.com/scheda.asp?n=9788846739100" target="_blank">Acquista il libro</a>
+</div>
+
+  
+  <!-- Altri libri -->
+  <div class="book-card" data-book-id="3" onclick="openPopup(this)" data-title="Totau" data-description="Ho dato una prima occhiata al libro “Totau” di Tommaso Randazzo, l’ho captato
+subito come racconto realistico con le parole scurrili e mi sono detta chissà che altro
+vorrà dire questo testo… Sperando in qualche motivazione di fondo, ho iniziato a
+leggere (sforzandomi) con attenzione. E subito sono stata catturata da questa scrittura
+vera, umana, vivace e profonda. C’è il talento della scrittura perché c’è verità, scavo e
+accettazione in una visione globale dove ci sta anche la morte. Una morte dilatata che
+fa parte della vita e che ne è riflessione e aiuto positivo. Poi trovo che l’autore si
+rammarica che in Italia “noi parliamo solo di cazzi” e sono più serena specialmente
+anche quando parla delle somiglianze tra il padre bambino e il bambino del
+Kebabbaro. Poi il desiderio di una famiglia felice mi riporta ad ataviche forme di
+pienezza. I personaggi e i luoghi che si incontrano affollati di descrizioni fanno stare
+il lettore dentro la vita in tutte le sue miserie e contraddizioni evidenziate con forza in
+un distacco (partecipato) senza giudicare. Ci sono colorate violenze verbali al limite
+della tensione, un vissuto penetrato a volte con riluttanza bene trasmesso dalla
+scrittura che diviene allora realtà traslata fatta di pause e accelerazioni. E’ l’aprirsi ad
+un mondo dove la ricerca d’un percorso è essenziale. I linguaggi si diversificano in
+modi di dire, dialetti, rafforzamenti. Certamente una ricchezza linguistica impostata
+agli ambienti da rendere credibili. Eppure trovo in questa italianità scarnita e scandita
+un fare letterario americano alla Hemingway dove l’autentico si mischia ad un voluto
+fare letterario che colpisca anche scientificamente, ma è un sospetto che passa
+attraversando le belle descrizioni e, in fondo, la voglia di pulito.">
+    <%= image_tag('copertina-libro2.jpg', alt: 'Copertina del libro La teoria del tutto', class: 'book-cover') %>
+    <h3></h3>
+    <p><a href="https://www.libreriasensibiliallefoglie.com/home/461-zoologia-urbana.html" target="_blank">Acquista il libro</a></p>
+  </div>
+  
+  <div class="book-card" data-book-id="4" onclick="openPopup(this)" data-title="Moltisolitudine" data-description="Un professore di educazione fisica e la crisi dei suoi quasi quarant’anni. Un’isola nel
+Mediterraneo dove tornare per incontrare gli amici dell’infanzia e (non) affrontare i
+fantasmi del passato. Una costa antica e meravigliosa, ma martoriata dalle fabbriche
+petrolchimiche, dall’abusivismo edilizio e dai resort. L’amore improvviso per due donne,
+una passione vissuta senza misura e senza coerenza, che rischia di portare verso il
+naufragio e la perdita di sé. Il surf, il mare, l’immersione totale nelle oasi di pace e natura
+che possiamo incontrare, forse, ancora per poco tempo. La solitudine che dilaga nelle
+nostre vite, nonostante siano caratterizzate da una moltitudine caotica di esperienze,
+amicizie, viaggi e relazioni sentimentali. I racconti di un nonno, ex partigiano, che tanti anni
+fa ha combattuto sulla Linea Gotica, ma che non ha realizzato fino in fondo i suoi sogni.
+Sono questi gli elementi di “Moltisolitudine”, una ballata estiva, sensuale e malinconica sul
+mondo che sta scomparendo fuori e dentro di noi, sui sogni che non abbiamo avuto il
+coraggio di avere.
+Pietro insegna in una città del “continente” e, in una sorta di rigurgito d’adolescenza, si
+allena nel karate con la sua amica e coach Marisa, detta Tanica, che lo porta a combattere
+nelle gare per atleti con più di trentacinque anni. In occasione del matrimonio del giovane
+figlio di Tanica e per le lunghe vacanze estive, entrambi tornano nell’isola da cui
+provengono e che hanno lasciato molti anni prima. Ad aspettarli c’è il loro amico Spartaco,
+surfista e leader del movimento ambientalista locale, che lotta contro un politico e un uomo
+d’affari del nord Italia in procinto di costruire l’ennesimo resort. Questa volta però la
+struttura turistica sarebbe a ridosso di un’antica cava greca sul mare, che disegna
+meravigliose geometrie sugli scogli e racchiude una spiaggetta unica, una perla
+incastonata sulla costa, dove Pietro e Spartaco da adolescenti passavano le loro sere
+d’estate con i primi amori o con i loro amici a bere birra.
+Pietro ritrova i ricordi sommersi nella casa dove abitava con i suoi genitori, che adesso
+vivono nel continente, e pian piano si ambienta nella vita dell’isola, passando le giornate
+lungo la costa con Spartaco a cercare onde da cavalcare e leggendo i libri che un tempo
+leggeva suo padre. Dopo molti anni rivede suo nonno, l’ultimo della famiglia rimasto
+sull’isola. Il confronto non è facile. Il nonno proviene da un mondo che sembra sempre più
+lontano e porta ancora con sé i ricordi traumatici della Seconda guerra mondiale.">
+
+    <%= image_tag('copertina-libro3.jpg', alt: 'Copertina del libro Guida galattica per autostoppisti', class: 'book-cover') %>
+    
+    <h3></h3>
+    <p></p>
+  </div>
+  
+  <div class="book-card" data-book-id="5" onclick="openPopup(this)" data-title="I mondi della cura" data-description="Il testo si occupa della nascita e dell’evoluzione dell’etnopsichiatria, disciplina critica che
+affida un ruolo cruciale alla componente culturale nella diagnosi e nella cura dei disturbi
+psicologico-psichiatrici. I primi studiosi che hanno riflettuto sull’importanza dell’orizzonte
+simbolico-culturale nella cura del disagio mentale sono stati innanzitutto Emil Kraepelin
+che, pur essendo uno dei padri fondatori della psichiatria “classica”, ha individuato a Giava
+alcune forme di espressione della sofferenza psichica non presenti in occidente, Claude
+Levi-Strauss che ha elaborato una teoria sull’efficacia simbolica di alcune pratiche curative
+degli sciamani Cuna di Panama attraverso la narrazione di antichi miti del loro popolo,
+Frantz Fanon che ha messo in luce i rapporti di dominazione coloniale anche all’interno
+delle teorie e delle terapie psichiatriche, Henri Collomb che ha introdotto nella clinica
+psichiatrica a Dakar molti elementi della cultura senegalese, anche con l’ausilio di guaritori
+tradizionali, e Georges Devereux che ha definito in modo preciso l’etnopsichiatria come
+disciplina che studia le rappresentazioni della malattia e della cura nelle varie culture. È
+però l’Antropologia Medica a mettere in discussione in modo sistematico la presunta
+universalità della psichiatria occidentale e del suo approccio scientifico, con la sua rigida
+separazione mente/corpo e con la sua medicalizzazione del disagio. Infatti, il concetto di
+“narrazione della malattia”, che avviene attraverso peculiari simboli e miti tradizionali e che
+l’antropologia medica propone di sostituire a quello di malattia, obbliga gli attori della
+drammaturgia intorno al binomio salute/malattia e al discorso medico – studiosi, medici,
+pazienti e loro familiari – a prendere in considerazione l’esperienza corporea e il racconto
+della sofferenza, che sempre si accompagnano alla malattia.">
+    <%= image_tag('copertina-libro4.jpg', alt: 'Copertina del libro Storia dell\'arte', class: 'book-cover') %>
+    <h3></h3>
+    <p></p>
+    <a href="https://www.libreriasensibiliallefoglie.com/home/461-zoologia-urbana.html" id="acquistaLibro" target="_blank" rel="noopener noreferrer">Acquista il libro</a>
+  </div>
+</div>
+
+</head>
+<body>
+
+
+
+<div class="books-row">
+  <% @books.each do |book| %>
+    <div class="book-card" data-book-id="<%= book.id %>"
+         onclick="openPopup(this)">
+      <%= image_tag(book.cover_image.url, alt: book.title, class: 'book-cover') if book.cover_image.present? %>
+      <h3><%= book.title %></h3>
+      <p><%= book.author %></p>
+    </div>
+  <% end %>
+</div>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <div class="book-cover-container">
+      <!-- L'immagine del libro verrà inserita qui -->
+    </div>
+    <div class="book-details">
+      <!-- Titolo e descrizione del libro verranno inseriti qui -->
+    </div>
+  </div>
+  <span class="close-btn" onclick="closePopup()">&times;</span>
+</div>
+
+<script>
+function openPopup(element) {
+  const title = element.getAttribute('data-title');
+  const description = element.getAttribute('data-description');
+  const imageUrl = element.querySelector('.book-cover').getAttribute('src');
+  
+  // Inserisci l'immagine e i dettagli del libro nel popup
+  document.querySelector('.book-cover-container').innerHTML = `<img src="${imageUrl}" alt="Cover" class="book-cover-popup">`;
+  document.querySelector('.book-details').innerHTML = `<h2>${title}</h2><p>${description}</p>`;
+  
+  // Mostra il popup
+  document.getElementById('popup').style.display = 'flex';
+  
+}
+
+
+function closePopup() {
+  // Nascondi il popup
+  document.getElementById('popup').style.display = 'none';
+  
+  // Rimuovi la classe perché il popup è ora chiuso
+  document.body.classList.remove('popup-open');
+}
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+

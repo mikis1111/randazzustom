@@ -1,0 +1,237 @@
+@import "materialize";
+@import "books";
+
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px; /* O l'altezza che preferisci */
+    
+  }
+  
+  .centered-image {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  
+
+  footer {
+    background-color: #000000; /* Nero */
+    color: #ffffff; /* Bianco per il testo */
+    text-align: center;
+    width: 100%;
+    padding: 0px 0; /* Adegua i valori di padding in base alle tue preferenze */
+  }
+
+  .image-container {
+    display: flex; /* O un altro display che preferisci */
+    align-items: stretch; /* Stira i figli per adattarsi all'altezza */
+    margin-bottom: 0; /* Rimuove qualsiasi margine inferiore */
+  }
+
+
+ 
+  
+ 
+
+
+  .immagine-sinistra {
+    float: left;
+    margin-right: 20px; /* Distanza tra l'immagine e il testo */
+    width: 350px;
+    margin-left: 200px;
+  }
+  
+
+  .contenitore-flex {
+    display: flex;
+    align-items: center; /* Centra gli elementi verticalmente */
+  }
+  
+  .immagine img {
+    margin-right: 20px; /* Aggiunge spazio tra l'immagine e la descrizione */
+  }
+
+
+  /* Layout della pagina con Flexbox */
+.page-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    color: black;
+  }
+  
+  /* Stile per le immagini */
+  .profile-image {
+    border-radius: 70%;
+    margin-bottom: 20px;
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+  }
+  
+  /* Stile per il testo e i titoli */
+  .profile-description {
+    max-width: 710px;
+  }
+  
+  h1, h2, p {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Media query per dispositivi mobili */
+  @media (max-width: 768px) {
+    .page-layout {
+      flex-direction: column;
+    }
+  }
+  
+
+  .books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .row {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Aggiungi margine tra le file */
+  }
+  
+  .book {
+    flex: 0 1 30%; /* Occupa circa un terzo della larghezza della fila, con un po' di flessibilità */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Opzionale: aggiunge un'ombra per un effetto elevato */
+    padding: 10px;
+    margin: 5px; /* Assicurati che ci sia spazio tra i libri */
+  }
+
+  nav ul a
+{
+  transition: background-color .3s;
+  font-size: 1.5rem;
+  color: #fff;
+  display: block;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.titolo-miei-libri {
+    text-align: center;
+  }
+
+
+  
+.close-btn, .book-cover {
+    cursor: pointer;
+  }
+  
+
+
+  /* Stile predefinito per desktop */
+.brand-logo {
+    font-size: 14px; /* Ad esempio, usa la dimensione che preferisci */
+    /* altri stili */
+  }
+  
+  /* Stile per dispositivi mobili */
+  @media screen and (max-width: 600px) {
+    .brand-logo {
+    font-size: 1.75rem !important; 
+      
+    }
+  }
+  
+
+
+ /* Aggiungi questo al tuo CSS, ad esempio in application.css o un altro file CSS pertinente */
+@media (max-width: 600px) {
+    .popup-open .book-cover {
+      display: none !important; /* Utilizza !important con cautela */
+    }
+  }
+
+  
+
+  /* Questo nasconde la copertina del libro nel popup quando la classe 'popup-open' è aggiunta al body */
+@media (max-width: 600px) {
+    body.popup-open .book-cover-popup {
+      display: none;
+    }
+  }
+
+  
+  @media (max-width: 600px) {
+  .popup-open .book-cover-popup {
+    display: none; /* hai già questa regola */
+  }
+
+  /* Aggiungi queste regole per far sì che i dettagli del libro occupino tutto lo spazio disponibile */
+  .popup-open .popup-content {
+    flex-direction: column; /* Imposta la direzione del flex a colonna */
+  }
+
+  .popup-open .book-details {
+    width: 100%; /* Consente ai dettagli del libro di occupare l'intera larghezza */
+  }
+}
+
+  
+  
+ 
+@media (max-width: 600px) {
+    .popup .book-cover-container img {
+      width: 100%; /* Adatta la larghezza dell'immagine al contenitore */
+      max-width: 300px; /* o la larghezza massima desiderata */
+      margin: 0 auto 20px; /* Centra l'immagine e aggiungi spazio sotto */
+    }
+  
+    .popup .book-details {
+      width: 100%; /* Permette ai dettagli del libro di occupare la larghezza disponibile */
+    }
+  
+    .popup-content {
+      flex-direction: column; /* Imposta i figli del popup in colonna */
+      align-items: center; /* Centra gli elementi figli orizzontalmente */
+    }
+  }
+
+  
+  /* Se "Tommaso Randazzo" è il testo all'interno di un elemento, ad esempio un <h1> */
+.brand-logo {
+    font-size: 4vw; /* Adatta la dimensione del font in base alla larghezza del viewport */
+    /* Più la finestra è stretta, più piccolo diventa il testo */
+  }
+  
+  /* Per non farlo diventare troppo piccolo su dispositivi molto stretti, puoi impostare un minimo */
+  @media (max-width: 600px) {
+    .brand-logo {
+      font-size: 18px; /* o la dimensione minima che ritieni opportuna */
+    }
+  }
+  
+  
+  
+ 
+  
+  
+  
