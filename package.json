@@ -1,7 +1,5 @@
 
 
-
-
 {
   "start": "node index.js",
   "name": "tomweb",
@@ -20,4 +18,6 @@
   "devDependencies": {
     "webpack-dev-server": "^3"
   }
+
 }
+  
