@@ -7,7 +7,7 @@ gem 'bundler', '2.5.6'
 gem 'rails', '~> 6.1.6'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.4'
-'
+gem 'pg', '~> 1.2'
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
@@ -31,8 +31,8 @@ gem 'materialize-sass'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :production do
-gem 'rails_12factor' 
-gem 'pg', '~> 1.2'
+  gem 'rails_12factor' 
+
 end
 
 group :development, :test do
