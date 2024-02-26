@@ -11,7 +11,7 @@ import 'materialize-css/dist/js/materialize'
 import 'materialize-css/dist/css/materialize.min.css'
 import '../stylesheets/application.scss'
 import '../stylesheets/home.scss'
-import './popup'
+
 
 
 Rails.start()
