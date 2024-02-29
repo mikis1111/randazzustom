@@ -128,7 +128,7 @@ body {
   nav ul a
 {
   transition: background-color .3s;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #fff;
   display: block;
   padding: 0 15px;
@@ -216,22 +216,63 @@ body {
   }
 
   
-  /* Se "Tommaso Randazzo" è il testo all'interno di un elemento, ad esempio un <h1> */
-.brand-logo {
-    font-size: 4vw; /* Adatta la dimensione del font in base alla larghezza del viewport */
-    /* Più la finestra è stretta, più piccolo diventa il testo */
+  .brand-logo {
+    font-size: 14px; /* Dimensione predefinita */
   }
   
-  /* Per non farlo diventare troppo piccolo su dispositivi molto stretti, puoi impostare un minimo */
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .brand-logo {
-      font-size: 18px; /* o la dimensione minima che ritieni opportuna */
+      font-size: 18px; /* Dimensioni più piccole per tablet */
+    }
+  }
+  
+  @media (max-width: 460px) {
+    .brand-logo {
+      font-size: 6px; /* Dimensioni ancora più piccole per telefoni */
     }
   }
   
   
   
- 
+  
+  .brand-logo {
+    min-width: 120px; /* O la larghezza che meglio si adatta al tuo design */
+    white-space: nowrap; /* Impedisce al testo di andare a capo */
+  }
   
   
+  
+  .material-icons {
+    font-size: 7px;
+    padding-left: 5px;
+  }
+
+
+  
+  
+  
+  // Supponendo che il titolo sia in un `<h2>` all'interno del popup
+.popup h2 {
+    font-size: 24px; // Riduci questo valore secondo necessità
+  }
+  
+  // Oppure se il titolo ha una classe specifica
+  .popup .book-title {
+    font-size: 24px; // Riduci questo valore secondo necessità
+  }
+  
+  // Adatta la dimensione del font in base alle dimensioni dello schermo con media queries
+  @media (max-width: 768px) {
+    .popup h2 {
+      font-size: 20px; // Più piccolo per tablet
+    }
+    // Se hai una classe specifica per i titoli nel popup, usala qui
+  }
+  
+  @media (max-width: 480px) {
+    .popup h2 {
+      font-size: 20px; // Ancora più piccolo per telefoni
+    }
+    // Se hai una classe specifica per i titoli nel popup, usala qui
+  }
   

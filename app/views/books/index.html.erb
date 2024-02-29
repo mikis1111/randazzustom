@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: column;
   align-items: center; /* Centra l'immagine nella card */
+  
 }
 
 .book-cover {
@@ -29,6 +30,7 @@
   height: auto; /* Mantiene le proporzioni dell'immagine */
   max-width: 220px; /* Imposta una larghezza massima per l'immagine */
   border-radius: 5px; /* Opzionale: aggiunge bordi arrotondati all'immagine */
+  
 }
 
 
@@ -44,9 +46,11 @@
       z-index: 1000;
       padding: 20px;
       border-radius: 10px;
+      
     }
     .popup-content {
       display: flex;
+      
     }
     .book-cover-container img {
       max-width: 60%;
@@ -125,7 +129,7 @@ di questi caotici e indimenticabili quaranta giorni.<br><br>">
   <%= image_tag('copertina-libro1.jpg', alt: 'Copertina del libro Le avventure di Sherlock Holmes', class: 'book-cover') %>
   <h3></h3>
   <p></p>
-  <a href="https://www.edizioniets.com/scheda.asp?n=9788846739100" target="_blank">Acquista il libro</a>
+  <a href="https://www.edizioniets.com/scheda.asp?n=9788846739100" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Acquista il libro</a>
 </div>
 
   
@@ -153,7 +157,8 @@ fare letterario che colpisca anche scientificamente, ma è un sospetto che passa
 attraversando le belle descrizioni e, in fondo, la voglia di pulito.">
     <%= image_tag('copertina-libro2.jpg', alt: 'Copertina del libro La teoria del tutto', class: 'book-cover') %>
     <h3></h3>
-    <p><a href="https://www.libreriasensibiliallefoglie.com/home/461-zoologia-urbana.html" target="_blank">Acquista il libro</a></p>
+    <p><a href="https://www.amazon.it/gp/aw/d/B0BNGFD335/ref=tmm_pap_swatch_0" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Acquista il libro</a></p>
+    
   </div>
   
   <div class="book-card" data-book-id="4" onclick="openPopup(this)" data-title="Moltisolitudine" data-description="Un professore di educazione fisica e la crisi dei suoi quasi quarant’anni. Un’isola nel
@@ -190,7 +195,7 @@ lontano e porta ancora con sé i ricordi traumatici della Seconda guerra mondial
     <%= image_tag('copertina-libro3.jpg', alt: 'Copertina del libro Guida galattica per autostoppisti', class: 'book-cover') %>
     
     <h3></h3>
-    <p></p>
+    <p><a href="https://www.amazon.it/dp/B0BMSV5PQN/ref=tmm_pap_swatch_0" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Acquista il libro</a></p>
   </div>
   
   <div class="book-card" data-book-id="5" onclick="openPopup(this)" data-title="I mondi della cura" data-description="Il testo si occupa della nascita e dell’evoluzione dell’etnopsichiatria, disciplina critica che
@@ -217,7 +222,7 @@ della sofferenza, che sempre si accompagnano alla malattia.">
     <%= image_tag('copertina-libro4.jpg', alt: 'Copertina del libro Storia dell\'arte', class: 'book-cover') %>
     <h3></h3>
     <p></p>
-    <a href="https://www.libreriasensibiliallefoglie.com/home/461-zoologia-urbana.html" id="acquistaLibro" target="_blank" rel="noopener noreferrer">Acquista il libro</a>
+    <a href="https://www.amazon.it/dp/B0BMZM4TG9/ref=tmm_pap_swatch_0" id="acquistaLibro" target="_blank" rel="noopener noreferrer">Acquista il libro</a>
   </div>
 </div>
 
