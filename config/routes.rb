@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'books/index'
-  
   root to: 'home#index'
+  get 'books/index'
   get 'about', to: 'static_pages#about'
   get 'i_miei_libri', to: 'books#index'
   resources :books, only: [:index]
