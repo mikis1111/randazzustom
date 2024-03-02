@@ -21,6 +21,7 @@
     "webpack-dev-server": "^3"
   },
   "scripts": {
+    "main": "index.js",
     "start": "node index.js",
     "build": "webpack --mode production"
   },
