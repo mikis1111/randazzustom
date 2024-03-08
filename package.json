@@ -21,9 +21,9 @@
     "webpack-dev-server": "^3"
   },
   "scripts": {
-    "main": "src/index.js",
+    
     "start": "node index.js",
-    "build": "webpack --mode production"
+    
   },
   "engines": {
     "node": "16.19.0",
