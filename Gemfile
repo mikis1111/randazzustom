@@ -10,20 +10,16 @@ gem "rails", "~> 7.0.0"
 
 gem 'pg', '~> 1.2'
 gem "sprockets-rails"
-gem 'rack-timeout'
+
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-<<<<<<< HEAD
 gem 'rack-timeout', '~> 0.6.3'
-gem "sprockets-rails"
-gem 'importmap-rails'
-=======
->>>>>>> f370efd1fcf0872946601cab8f70bec58dfd289b
 
+gem 'importmap-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
