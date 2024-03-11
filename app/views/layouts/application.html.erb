@@ -10,6 +10,8 @@
     <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'about', media: 'all', 'data-turbolinks-track': 'reload' %>
+
 
     
     <!-- Materialize CSS -->
@@ -91,10 +93,14 @@
     
   </main>
 
-        <footer>
+    <footer>  
   <p class="copyright-text">Tommaso Randazzo © 2024 Copyright Text</p>
+
+  <% if current_page?(root_path) %>
+    <p class="photo-credit">Foto concessa per cortesia di Marco Delfiol.</p>
+  <% end %>
 </footer>
-            
+
  <script>
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');

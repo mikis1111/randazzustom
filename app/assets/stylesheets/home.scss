@@ -5,3 +5,16 @@
     background-position: center;
     height: -10px; /* O l'altezza desiderata */
   }
+
+
+  footer {
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Se vuoi applicare lo stile specificamente ai paragrafi all'interno del footer */
+  footer p {
+    text-align: center;
+    margin: 0 auto; /* Centra il contenuto e applica un margine automatico orizzontale */
+  }
+  
