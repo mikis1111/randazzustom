@@ -25,9 +25,10 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: <%= ENV['defaultdb'] %> # Qui inserisci il nome del tuo database, che hai detto essere 'defaultdb'
-  username: <%= ENV['doadmin'] %> # Imposta questa variabile d'ambiente nel tuo ambiente di produzione
-  password: <%= ENV['AVNS_z590mtdqWaG1QenvEA4'] %> # Imposta questa variabile d'ambiente nel tuo ambiente di produzione
-  host: <%= ENV['db-postgresql-lon1-14464-do-user-16090557-0.c.db.ondigitalocean.com'] %> # Imposta questa variabile d'ambiente nel tuo ambiente di produzione
-  port: <%= ENV['25060'] %> # Imposta questa variabile d'ambiente nel tuo ambiente di produzione, che hai detto essere '25060'
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
   sslmode: require
+
