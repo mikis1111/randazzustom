@@ -8,7 +8,7 @@ gem 'bundler', '2.5.6'
 gem "rails", "~> 7.0.0"
 # Use sqlite3 as the database for Active Record
 
-gem 'pg'
+
 
 gem "sprockets-rails"
 
@@ -39,7 +39,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :production do
   gem 'rails_12factor'
-   
+  gem 'pg' 
 
 end
 
