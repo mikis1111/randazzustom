@@ -1,3 +1,7 @@
+<div class="image-container" style="position: relative; display: inline-block;">
+  <!-- Bottone sopra l'immagine -->
+  <%= link_to 'Download CV', '/documents/CV2.pdf', class: 'btn btn-primary download-button', style: 'position: absolute; top: 10px; left: 50%; transform: translateX(-50%); background-color: #007bff; color: white; padding: 5px 15px; font-size: 14px;' %><br><br><br>
+
 <div class="page-layout">
   <%= image_tag("tommaso.jpg", alt: "Descrizione immagine", class: "profile-image") %><br><br>
   
@@ -8,11 +12,6 @@
     </p>
   </div>
 
-  <!-- Bottone e footer -->
-  <div class="footer-section">
-    <%= link_to 'Download CV', '/documents/CV2.pdf', class: 'btn btn-primary download-button' %>
-    <br><br>
-    
-  </div>
+  
 </div>
 
