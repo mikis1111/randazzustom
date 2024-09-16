@@ -307,7 +307,12 @@ body {
     margin: 0 auto; /* Centra il contenuto e applica un margine automatico orizzontale */
   }
 
-
+  .small-button {
+    padding: 5px 15px;       /* Riduce il padding */
+    width: 150px;            /* Larghezza fissa */
+    font-size: 14px;         /* Testo più piccolo */
+  }
+  
   
   
   
