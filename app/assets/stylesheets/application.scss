@@ -1,5 +1,6 @@
 @import "materialize";
 @import "books";
+@import "laboratori";
 
 
 
@@ -16,11 +17,12 @@ body {
 
   .image-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* Allinea gli elementi all'inizio, a sinistra */
+    align-items: center; /* Facoltativo, allinea verticalmente */
     height: 700px; /* O l'altezza che preferisci */
     
   }
+  
   
   .centered-image {
     max-height: 100%;
@@ -37,11 +39,7 @@ body {
     padding: 0px 0; /* Adegua i valori di padding in base alle tue preferenze */
   }
 
-  .image-container {
-    display: flex; /* O un altro display che preferisci */
-    align-items: stretch; /* Stira i figli per adattarsi all'altezza */
-    margin-bottom: 0; /* Rimuove qualsiasi margine inferiore */
-  }
+  
 
 
  
@@ -82,8 +80,8 @@ body {
   .profile-image {
     border-radius: 70%;
     margin-bottom: 20px;
-    width: 240px;
-    height: 240px;
+    width: 340px;
+    height: 440px;
     object-fit: cover;
   }
   
@@ -308,3 +306,9 @@ body {
     text-align: center;
     margin: 0 auto; /* Centra il contenuto e applica un margine automatico orizzontale */
   }
+
+
+  
+  
+  
+  

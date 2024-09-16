@@ -1,0 +1,2 @@
+module LaboratorioArtisticoHelper
+end

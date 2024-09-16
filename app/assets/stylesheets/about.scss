@@ -5,3 +5,34 @@
     text-align: center;
     // Altri stili specifici per h1
   }
+
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: blue;
+    background-color: #007FFF; 
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .btn.btn-primary {
+    background-color: #007FFF !important;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .profile-description p {
+    text-align: justify;
+  }

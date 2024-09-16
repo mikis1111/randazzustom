@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'books/index'
   get 'about', to: 'static_pages#about'
   get 'i_miei_libri', to: 'books#index'
+  get 'laboratorio_artistico', to: 'laboratorio_artistico#index'
   resources :books, only: [:index]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
