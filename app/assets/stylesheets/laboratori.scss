@@ -1,3 +1,50 @@
-.profile-image {
-    background-image: url('tommaso-update.jpg?v=<%= Time.now.to_i %>');
+/* Stile per il titolo */
+.title-center {
+    text-align: center;
   }
+  
+  /* Layout generale della pagina */
+  .pages-layouts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Contenitore per l'immagine */
+  .images-containers {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Stile per l'immagine del profilo */
+  .profile-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;  /* Mantiene le proporzioni e riempie il contenitore */
+  }
+  
+  /* Stile per la descrizione del profilo */
+  .profile-description {
+    max-width: 700px;
+    padding: 0 20px;
+    margin-top: 20px;
+    text-align: justify;
+  }
+  
+  /* Media query per dispositivi mobili */
+  @media (max-width: 768px) {
+    .profile-image {
+      width: 100%;
+      height: auto;
+      max-width: 300px;  /* Ridimensiona l'immagine su schermi più piccoli */
+    }
+  
+    .profile-description {
+      max-width: 90%;
+      padding: 0 10px;
+    }
+  }
+  
