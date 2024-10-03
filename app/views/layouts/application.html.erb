@@ -14,7 +14,7 @@
     <%= stylesheet_link_tag 'about', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'laboratori', media: 'all' %>
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <!-- Materialize CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
@@ -58,6 +58,23 @@
         <li><%= link_to 'I miei libri', books_index_path %></li>
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Contatti<i class="material-icons right"></i></a></li>
         <li><%= link_to 'Laboratori artistico-educativi', laboratorio_artistico_path %></li>
+        <li class="social-icon">
+        <%= link_to "https://www.instagram.com/randaz.0?igsh=MWY3bGF3NWd6YzF2ag%3D%3D", target: "_blank", rel: "noopener" do %>
+        <%= image_tag "instagram.png", alt: "Instagram", size: "25x25" %> <!-- Icona colorata di Instagram -->
+        <% end %>
+        </li>
+
+        <li class="social-icon">
+        <%= link_to "https://www.facebook.com/tommaso.randazzo.3", target: "_blank", rel: "noopener" do %>
+        <%= image_tag "facebook.png", alt: "Facebook", size: "25x25" %> <!-- Icona di Facebook -->
+        <% end %>
+        </li>
+
+        <li class="social-icon">
+        <%= link_to "https://www.linkedin.com/in/tommaso-randazzo-11133345/", target: "_blank", rel: "noopener" do %>
+        <%= image_tag "linkedin.png", alt: "LinkedIn", size: "25x25" %> <!-- Icona di LinkedIn -->
+        <% end %>
+        </li>
 
       </ul>
       </div>
@@ -75,7 +92,28 @@
     <li><a href="mailto:randazzus@gmail.com">randazzus@gmail.com</a></li>
     <!-- Altri contatti se necessario -->
   </ul>
-        
+       <!-- Aggiungi le icone dei social media per i dispositivi mobili -->
+  <li class="social-icon">
+    <%= link_to "https://www.instagram.com/randaz.0?igsh=MWY3bGF3NWd6YzF2ag%3D%3D", target: "_blank", rel: "noopener" do %>
+      <%= image_tag "instagram.png", alt: "Instagram", size: "25x25" %> <!-- Icona colorata di Instagram -->
+    <% end %>
+  </li>
+  <li class="social-icon">
+    <%= link_to "https://www.facebook.com/tommaso.randazzo.3", target: "_blank", rel: "noopener" do %>
+      <%= image_tag "facebook.png", alt: "Facebook", size: "25x25" %> <!-- Icona di Facebook -->
+    <% end %>
+  </li>
+  <li class="social-icon">
+    <%= link_to "https://www.linkedin.com/in/tommaso-randazzo-11133345/", target: "_blank", rel: "noopener" do %>
+      <%= image_tag "linkedin.png", alt: "LinkedIn", size: "25x25" %> <!-- Icona di LinkedIn -->
+    <% end %>
+  </li>
+
+  <!-- Dropdown Structure (contatti) -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="mailto:randazzus@gmail.com">randazzus@gmail.com</a></li>
+  </ul>
+</ul> 
   </ul>
 
   <style>

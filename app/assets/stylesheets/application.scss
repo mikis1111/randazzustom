@@ -313,7 +313,31 @@ body {
     font-size: 14px;         /* Testo più piccolo */
   }
   
-  
-  
-  
-  
+
+
+  /* Stile per il menu */
+nav ul {
+  list-style-type: none; /* Rimuove i punti elenco */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Usa Flexbox per allineare gli elementi del menu */
+  justify-content: space-between; /* Mantiene le voci di menu a sinistra e l'icona a destra */
+  align-items: center; /* Allinea verticalmente gli elementi */
+}
+
+/* Stile per le voci di menu */
+nav ul li {
+  margin-right: 20px; /* Spazio tra le voci di menu */
+}
+
+/* Assicurati che l'ultima voce (social icon) abbia spazio corretto */
+nav ul li.social-icon {
+  margin-left: auto; /* Spinge l'icona all'estrema destra */
+}
+
+/* Dimensione e stile dell'icona */
+nav ul li i {
+  font-size: 20px; /* Dimensione dell'icona di Instagram */
+}
+
+
